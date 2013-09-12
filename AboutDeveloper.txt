@@ -1,2 +1,5 @@
+Name:Sameer 
 Email: sam.nyx@live.com
 Facebook: facebook.com/sam0hack
+Exp: 2 year exp of developing php application , 
+Skills: php,java,javascript,ajax
