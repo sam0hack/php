@@ -1,8 +1,10 @@
 How to install
 
 1. copy phpcode in your www dir
-2. import database from sql dir to your mysql server
-3. goto your browser address and run the app
+2. Set your email configuration  emailer.php,forgotpassword2.php,doctorhome.php
+3. config database database.php
+4. import database from sql dir to your mysql server
+5. goto your browser address and run the app
 
 About Application
 
