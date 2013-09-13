@@ -13,3 +13,11 @@ Doctor can upload report image and send email to patient email contains
 link and patient username (email) and auto generated password
 Patient login using email and password and after login download  also
 upload images limit is 200
+
+Languages
+Frontend
+HTML5,css3 with bootstrap,js
+------------
+Backend
+php,Mysql
+------------
