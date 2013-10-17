@@ -37,15 +37,15 @@ if (mysql_num_rows($sel)==1)
 	$mail = new PHPMailer;
 
 	$mail->IsSMTP();                                      // Set mailer to use SMTP
-	$mail->Host = 'smtpout.net';  // Specify main and backup server
+	$mail->Host = 'smtpout.secureserver.net';  // Specify main and backup server
 	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = 'ipackage.com';                            // SMTP username
-	$mail->Password = 'qwerty';                           // SMTP password
+	$mail->Username = 'Your smtp Username';                            // SMTP username
+	$mail->Password = 'Password';                           // SMTP password
 	//$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
-	$mail->From = 'myage.com';
+	$mail->From = 'elvish@galaxylifecare.info';
 	$mail->FromName = 'From Your Doctor';
-	$mail->AddAddress(''.$clientemail.'', 'oops');  // Add a recipient
+	$mail->AddAddress(''.$clientemail.'', 'elvish');  // Add a recipient
 	//$mail->AddAddress('ellen@example.com');               // Name is optional
 	$mail->AddReplyTo(''.$clientemail.'', 'replay to doctor');
 	//$mail->AddCC('cc@example.com');
@@ -78,15 +78,15 @@ mysql_query("insert into client_login VALUES('','$clientemail','$clintpassword',
 $mail = new PHPMailer;
 
 $mail->IsSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtpout.net';  // Specify main and backup server
+$mail->Host = 'smtpout.secureserver.net';  // Specify main and backup server
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'value';                            // SMTP username
-$mail->Password = 'value';                           // SMTP password
+$mail->Username = 'Your smtp Username';                            // SMTP username
+$mail->Password = 'Your Password';                           // SMTP password
 //$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
-$mail->From = 'value';
-$mail->FromName = 'value';
-$mail->AddAddress(''.$clientemail.'', 'value');  // Add a recipient
+$mail->From = 'elvish@galaxylifecare.info';
+$mail->FromName = 'From Your Doctor';
+$mail->AddAddress(''.$clientemail.'', 'elvish');  // Add a recipient
 //$mail->AddAddress('ellen@example.com');               // Name is optional
 $mail->AddReplyTo(''.$clientemail.'', 'replay to doctor');
 //$mail->AddCC('cc@example.com');

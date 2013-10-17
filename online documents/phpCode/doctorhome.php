@@ -77,7 +77,7 @@ $saved= "$destination/".$name;
 mysql_query("insert into mydocs VALUES('','$saved','$imgname','$email','$imgdate','$username','','$phone')")or die(mysql_error());
 
 mysql_query("update doctor_login set no_of_upload='$count' where username='$username' ");
-echo '<h1>Your file is successful Uploaded To Server</h1>';
+echo '<h3 style="text-align:center;"> successfuly Uploaded To Server</h3>';
 
 }
 
@@ -125,7 +125,7 @@ echo '<h3>Your file is successfully Uploaded To the Server</h3>';
 
 
             <!--marketing area-->
-            <div class="hero-unit" style="margin:0px; padding:10px 0px; text-align:left">
+            <div class="hero-unit h_top">
             	<div class="row">
             	    <div class="span2">Name</div>
                     <div class="span2">Email</div>
@@ -149,7 +149,7 @@ echo '<h3>Your file is successfully Uploaded To the Server</h3>';
   				</div>
 
              </div>
-
+<div class="hero-unit h_top r_b">
 <div class="row">
 	<div class="span2"><strong>Image</strong></div>
     <div class="span1"><strong>Filename</strong></div>
@@ -159,12 +159,12 @@ echo '<h3>Your file is successfully Uploaded To the Server</h3>';
     <div class="span2"><strong>Share On</strong></div>
     <div class="span1"><strong>Send mail</strong></div>
 </div>
-
+</div>
 <?php
 $getfiles=mysql_query("select * from mydocs where doctor_name='$username' order by docs_id DESC ")or die(mysql_error(). "Error we are not get files from server check line no. 4 index.php ");
 while ($file=mysql_fetch_array($getfiles))
 {
-echo'<div class="row" style="border-bottom:1px solid lightgray">';
+echo'<div class="row">';
 	$docs_id=$file['docs_id'];
 	$img=$file['img'];
 	$file_name=$file['img_name'];
@@ -184,14 +184,15 @@ echo'<div class="row" style="border-bottom:1px solid lightgray">';
         <div class="span2"><?php echo '<a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]='.$link.'"><img src="img/Facebook-Icon.png" height="25" width="25"  title="Facebook"></a> <a href="http://twitter.com/share?'.$link.'"><img src="img/twitter_icon.png" height="25" width="25" title="TWitter"></a> <a href="	 https://plus.google.com/share?url='.$link.'"><img src="img/google-Plus-icon.png" height="25" width="25"  title="Google+"></a>';?>
         </div>
         <div class="span1"><?php  if (filter_var($details, FILTER_VALIDATE_EMAIL)) {
- echo '<a href="Emailer.php?email='.$details.'"><img src="img/email.jpg" height="38" width="55"  title="EMAIL"></a>';
-  } echo '<a href="del1.php?page='.$docs_id.'&d='.$details.'">Del</a>';?>
+ echo '<a href="Emailer.php?email='.$details.'"><img src="img/send_email.png" height="38" width="55"  title="EMAIL"></a>';
+  } echo '<a href="del1.php?page='.$docs_id.'&d='.$details.'"><img src="img/no.png" height="20" width="20" title="Delete" ></a>';?>
 
 
   </div>
 
   <?php
   echo'</div>';
+    echo'<hr>';
   }?>
   </div>
   <!--<footer class="navbar modal-footer navbar-fixed-bottom">

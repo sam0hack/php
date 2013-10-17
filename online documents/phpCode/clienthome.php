@@ -22,26 +22,27 @@ $max=200;
 ?>
 <div class="container">
 	<div class="hero-unit" style="margin:0px; padding:10px 0px; text-align:left">
-    	<div class="span7">Welcome <?php echo $cusernmae; ?><br/>
-    	You have <?php echo $left=$max-$counting;?> uploads left
+    	<div class="row">
+            <div class="span7">Welcome <?php echo $cusernmae; ?><br/>
+                You have <?php echo $left=$max-$counting;?> uploads left
+            </div>
+                <div class="span4 text-right">
+                    <form method="post" action="clientsearch.php" class="" style="">
+                            <input type="text" name="srch_txt" class="input-medium search-query">
+                            <button type="submit" name="srch" class="btn btn-success">Search</button>
+                      </form>
+                      </div>
+          </div>
 
-    	</div>
-        	<div class="span4 text-right">
-                <form method="post" action="clientsearch.php" class="" style="">
-                        <input type="text" name="srch_txt" class="input-medium search-query">
-                        <button type="submit" name="srch" class="btn btn-success">Search</button>
-                  </form>
-                  </div>
-                  <div style="clear:both"></div>
-			</div>
+    </div>
+            <div style="clear:both; margin:10px 0px"></div>
 
 
 
-  <div style="clear:both; margin:10px 0px"></div>
 
 
             <!--marketing area-->
-            <div class="hero-unit" style="margin:0px; padding:10px 0px; text-align:left">
+            <div class="hero-unit h_top">
             	<div class="row">
             	    <div class="span2">Name</div>
                     <div class="span2">Email</div>
@@ -62,10 +63,12 @@ $max=200;
                     <input type="submit" name="upload" value="upload" class="btn btn-success">
                     </form>
                     </div>
+
   				</div>
-		</div>
-             	<div style="clear:both"></div>
-  <div class="row" style="padding:20px">
+		<div style="clear:both; margin:10px 0px"></div>
+
+
+
 
 
 
@@ -165,6 +168,7 @@ if ($count>$max)
 }
 ?>
 
+<div class="hero-unit h_top r_b">
 <div class="row">
 	<div class="span2"><strong>Image</strong></div>
     <div class="span2"><strong>Filename</strong></div>
@@ -173,7 +177,7 @@ if ($count>$max)
     <div class="span2"><strong>Date</strong></div>
     <div class="span1"><strong>Phone No</strong></div>
     <div class="span2"style=" text-align:right"><strong>Share On</strong></div>
-
+</div>
 </div>
 <?php
 
@@ -198,16 +202,17 @@ echo'<div class="row" >';
                     <div class="span2"><?php echo $date;?></div>
                   <div class="span1"><?php echo $client_phone;?></div>
                   <div class="span2" style=" text-align:right">
-				  	<?php echo  '<a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]='.$link.'"><img src="img/Facebook-Icon.png" ></a> <a href="http://twitter.com/share?'.$link.'"><img src="img/twitter_icon.jpg" height="38" width="25"></a> <a href="	 https://plus.google.com/share?url='.$link.'"><img src="img/google-Plus-icon.png" height="34" width="25"></a>';?>
+				  	<?php echo  '<a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]='.$link.'"><img src="img/Facebook-Icon.png" height="25" width="25"  title="Facebook"></a> <a href="http://twitter.com/share?'.$link.'"><img src="img/twitter_icon.png" height="25" width="25" title="TWitter"></a> <a href="	 https://plus.google.com/share?url='.$link.'"><img src="img/google-Plus-icon.png" height="25" width="25"  title="Google+"></a>';?>
                   </div>
 
-<?php echo '       <a href="del.php?page='.$docs_id.'">&nbsp;&nbsp;&nbsp; &nbsp;   Del</a>';?>
+<?php echo '       <a href="del.php?page='.$docs_id.'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="img/no.png" height="28" width="28" title="Delete" ></a>';?>
 
 
 
 
       <?php
 	   echo'</div>';
+	   echo'<hr>';
 	  }?>
 </div>
 <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>

@@ -9,6 +9,10 @@ elseif (!empty($_SESSION['cusername']))
 {
 header('location:clienthome.php');
 }
+elseif (!empty($_SESSION['ausername']))
+{
+	header('location: adminhome.php');
+}
 
 require 'database.php';
 error_reporting(0);
@@ -30,16 +34,23 @@ if (mysql_num_rows($finddoc)==1)
 {
 
 $_SESSION['username']=$username;
-$_SESSION['password']=$password;
 header('location: doctorhome.php');
 }
+
+$findadmin=mysql_query("select name,password from admin where name='$username' AND password='$password' ")or die(mysql_error());
+if(mysql_num_rows($findadmin))
+{
+$_SESSION['ausername']=$username;
+header('location: adminhome.php');
+
+}
+
 
 else {
 $findclient=mysql_query("select username,password from client_login where username='$username' AND password='$password' ");
 if (mysql_num_rows($findclient)==1)
 {
 $_SESSION['cusername']=$username;
-$_SESSION['cpassword']=$password;
 header('location: clienthome.php');
 }
 else

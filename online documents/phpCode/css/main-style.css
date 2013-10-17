@@ -10,3 +10,6 @@ word-wrap: break-word;       /* Internet Explorer 5.5+ */
 word-break: break-all;
 white-space: normal;
 }
+
+.h_top{margin:0px; padding:10px 0px; text-align:left; font-size:14px;}
+.r_b{background:#BEE296;/*#46688D;*/  padding:0px 0px; color:#000; margin-bottom:20px; font-size:12px;}

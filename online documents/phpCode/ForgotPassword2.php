@@ -84,15 +84,15 @@ if (!empty($imail)) {
 $mail = new PHPMailer;
 
 $mail->IsSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtpout.net';  // Specify main and backup server
+$mail->Host = 'smtpout.secureserver.net';  // Specify main and backup server
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'user@us.com';                            // SMTP username
-$mail->Password = 'pass@qwerty';                           // SMTP password
+$mail->Username = 'Your smtp Username';                            // SMTP username
+$mail->Password = 'Your Password';                           // SMTP password
 //$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
-$mail->From = 'my@mypackage.com';
-$mail->FromName = 'name';
-$mail->AddAddress(''.$imail.'', 'doc');  // Add a recipient
+$mail->From = 'elvish@myhealthpackage.com';
+$mail->FromName = 'Your Password';
+$mail->AddAddress(''.$imail.'', 'elvish');  // Add a recipient
 //$mail->AddAddress('ellen@example.com');               // Name is optional
 //$mail->AddReplyTo(''.$username.'', 'replay to doctor');
 //$mail->AddCC('cc@example.com');

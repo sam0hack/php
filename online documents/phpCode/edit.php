@@ -1,14 +1,14 @@
 <?php
 ob_start();
 session_start();
-//error_reporting(0);
+error_reporting(0);
 $username=$_SESSION['username'];
 $cusername=$_SESSION['cusername'];
 
 require 'headwithsearch.php';
 require 'varfilter.php';
 require 'database.php';
-$c=mysql_query("select COUNT(client_name) from mydocs where doctor_name='$cusernmae'")or die(mysql_error());
+$c=mysql_query("select COUNT(client_name) from mydocs where doctor_name='$cusername'")or die(mysql_error());
 $counter=mysql_fetch_array($c);
 $count=$counter[0]+1;
 

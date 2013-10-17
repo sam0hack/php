@@ -1,6 +1,5 @@
 <?php
-/*This script written by sameer 
-@facebook facebook.com/sam0hack
+/*This script written by sameer beig
 @function1 unhack() remove bad inputs
 @function2 imgsize() set image size
 @function3 isimg()     Check valid image extensions

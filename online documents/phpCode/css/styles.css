@@ -3,11 +3,11 @@
 
 /* Imports */
 
-@import url(animate.css);
+/*@import url(animate.css);
 
 /* Selections */
 
-::selection {
+   ::selection {
  	color: #fff;
  	text-shadow: none;
  	background: #444;
@@ -175,6 +175,5 @@ input[type=submit]:active {
 	background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 	background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
 }
-
 
 

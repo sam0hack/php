@@ -1,6 +1,11 @@
 <?php
 ob_start();
 session_start();
+if(empty($_SESSION['username']))
+{
+header('location:index.php');
+exit();
+}
 error_reporting(0);
 $username=$_SESSION['username'];
 $cusername=$_SESSION['cusername'];

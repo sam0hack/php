@@ -2,9 +2,10 @@
 ob_start();
 error_reporting(0);
 session_start();
-if(empty($_SESSION['cusername']) && empty($_SESSION['username'] ))
+if(empty($_SESSION['cusername']) OR empty($_SESSION['username'] ) OR empty($_SESSION['ausername']))
 {
-	header('location:index.php');
+header('location:index.php');
+exit();
 }
 require 'headwithsearch.php';
 require 'database.php';
@@ -39,6 +40,21 @@ else
 	$echo= "your Old password is incorrect";
 }
 }
+
+if(!empty($_SESSION['ausername']))
+{
+	$getpass=mysql_query("select password from admin where password='$oldp' AND name='$username' ")or die(mysql_error());
+	if (mysql_num_rows($getpass)==1)
+	{
+		mysql_query("update admin set password='$newp' where name='$username'")or die(mysql_error());
+		$echo= "Password  Changed";
+	}
+	else
+	{
+		$echo= "your Old password is incorrect";
+	}
+}
+
 if(!empty($_SESSION['cusername']))
 {
 $getpass=mysql_query("select password from client_login where password='$oldp' AND username='$cusername' ")or die(mysql_error());

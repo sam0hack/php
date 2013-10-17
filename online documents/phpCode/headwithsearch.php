@@ -24,7 +24,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </a>
-       <a class="brand" href="index.php">Share Online Documents</a>
+       <a class="brand" href="index.php">Elvish health solutions</a>
        <div class="nav-collapse" id="main-menu">
         <ul class="nav" id="main-menu-left">
           <li><a onClick="pageTracker._link(this.href); return false;" href="index.php">All</a></li>

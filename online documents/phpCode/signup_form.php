@@ -21,7 +21,7 @@ if (isset($_POST['signup'])) {
    $ERROR="This is no a valid phone number";           //Check for valid phone number
 	}
 
-	elseif($pass1 <5) {
+	elseif(strlen($pass1) <5) {
 		$ERROR="Password must be Greater then 5 character";  //Check password lenghth
 	}
 	elseif($pass1!=$pass2)
@@ -38,8 +38,8 @@ if (isset($_POST['signup'])) {
 	}
 //End Validating
 if ($ERROR==false) {          //If there is no ERROR then submit the user data
-	mysql_query("insert into tmp_table values('','$name','$email','$phone','$pass1','$sec_q','$sec_a')")or die(mysql_error());
-   $success="Success we send you a email soon";
+	mysql_query("insert into tmp_table values('','NULL','$name','$email','$phone','$pass1','$sec_q','$sec_a','')")or die(mysql_error());
+   $success="Successful ! You will receive a verification mail soon from us.";
 
 }
 
