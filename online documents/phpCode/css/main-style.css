@@ -11,5 +11,16 @@ word-break: break-all;
 white-space: normal;
 }
 
-.h_top{margin:0px; padding:10px 0px; text-align:left; font-size:14px;}
-.r_b{background:#BEE296;/*#46688D;*/  padding:0px 0px; color:#000; margin-bottom:20px; font-size:12px;}
+.h_top{margin:0px; padding:10px 0px; text-align:left; font-size:14px;width: 989px;}
+.r_b {background:#BEE296 !important;/*#46688D;*/  padding:0px 0px; color:#000; margin-bottom:20px; font-size:12px;}
+.r_b2 {background:#BEE296 !important;/*#46688D;*/  padding:0px 0px; color:#000; margin-bottom:20px; font-size:12px;}
+.h_top2{margin:0px; padding:10px 0px; text-align:left; font-size:14px;}
+.wrapword2{	white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+white-space: -pre-wrap;      /* Opera 4-6 */
+white-space: -o-pre-wrap;    /* Opera 7 */
+white-space: pre-wrap;       /* css-3 */
+word-wrap: break-word;       /* Internet Explorer 5.5+ */
+word-break: break-all;
+white-space: normal;
+}
+.hero-unit1 h1{margin-bottom:0;font-size:60px;line-height:1;letter-spacing:-1px;color:inherit}.hero-unit1 p{font-size:18px;font-weight:200;line-height:30px;color:inherit;}

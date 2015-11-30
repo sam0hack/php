@@ -1,0 +1,33 @@
+.row
+{
+    float: left;
+    width:100%;
+    //background: grey;
+    height: 25px;
+    padding: 0px 5px;
+    text-align: center;
+    clear: both;
+    margin: 5px 0px;
+}
+.element
+{
+    float: left;
+    width:32%;
+    //background: olive;
+    height: 25px;
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 16px;
+}
+.bar
+{
+    width: 100%;
+    height: 5px;
+    background: #5b80b2;
+    float: left;
+}
+.doctors{
+
+    background:#000080;
+
+}

@@ -5,5 +5,8 @@ unset($_SESSION['password']);
 unset($_SESSION['cusername']);
 unset($_SESSION['cpassword']);
 unset($_SESSION['ausername']);
+unset($_SESSION['usertype']);
+unset($_SESSION['city']);
+unset($_SESSION['con_id']);
 header('location:index.php');
 ?>

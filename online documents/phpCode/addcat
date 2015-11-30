@@ -1,0 +1,4 @@
+<?php
+
+?>
+<input name="icat"  type="text"><input type="submit" name="subcat" style="height:50px; width:70px" value="Add">

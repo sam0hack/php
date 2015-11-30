@@ -17,15 +17,15 @@ function sendmail($doctoremail,$clientemail,$subject,$msg)
 	$mail = new PHPMailer;
 
 	$mail->IsSMTP();                                      // Set mailer to use SMTP
-	$mail->Host = 'smtpout.secureserver.net';  // Specify main and backup server
-	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = 'Your smtp Username';                            // SMTP username
-	$mail->Password = 'Your Password';                           // SMTP password
+    $mail->Host = 'relay-hosting.secureserver.net';  // Specify main and backup server
+	//$mail->SMTPAuth = true;                               // Enable SMTP authentication
+	$mail->Username = '#';                            // SMTP username
+	$mail->Password = '#';                           // SMTP password
 	//$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
-	$mail->From = 'elvish@myhealthpackage.com';
+	$mail->From = '#';
 	$mail->FromName = 'From Your Doctor';
-	$mail->AddAddress(''.$clientemail.'', 'elvish');  // Add a recipient
+	$mail->AddAddress(''.$clientemail.'', '#');  // Add a recipient
 	//$mail->AddAddress('ellen@example.com');               // Name is optional
 	$mail->AddReplyTo(''.$doctoremail.'', 'replay to doctor');
 	//$mail->AddCC('cc@example.com');

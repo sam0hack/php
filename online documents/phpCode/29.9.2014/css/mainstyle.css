@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	/*background:rgba(243, 232, 245, 0.67);*/
+	background:url(../img/bgc.jpg);
+	margin:0px;
+	padding:0px
+	width:100%;
+}
+html{width:100%;}
+.cls {
+	clear:both;
+}
+*{margin:0px; padding:0px;}
+#miancontainer {
+	margin:auto;
+	width:100%;
+}
+#hedder {
+	border-radius:10px;
+	height:130px;
+	margin:auto
+}
+
+#logsin {
+	margin-right:20px;
+}
+* {
+	font:Georgia, "Times New Roman", Times, serif
+}
+#cantainer {
+	background:rgba(243, 232, 245, 0.67);
+	margin:0px auto;
+	padding:0px;
+	width:100%;	
+	
+}
+
+#pr{ background:#F00; color:#000;}
+
+#leftcont{ float:left; width:300px;}
+.buton{width:50px; background:#0000B3; color:#FFFFFF; border:1px solid; padding:5px 15px; cursor:pointer; margin-top:500px; }
+	
+
+#imaglogo{ float:left}
+
+#paass{float:right; margin-top:10px; padding-right:50px; font:Arial, Helvetica, sans-serif; font-size:14px;}
+#paass a{text-decoration:none;}
+#paass a:hover{text-decoration:underline; cursor:pointer; color:#0066FF}
+
+
+
+
+
+#rightcont 
+{ float:right; margin-top:0etgrdgrgrgrgpx; background:#0066CC; width:300px; 
+ color:#00FFCC;
+    
+}
+
+#rightcont ul li
+{
+color:#00FFCC;
+list-style-type:none;
+line-height:25px;
+ 
+}
+#fotter {
+	background:#003399;
+	height:100px;
+	margin:20px auto;
+}
+.t{ 
+   background: ;
+  }
+.r{ color:#000; font-size:13px; font-weight:700; background:#E6E6FF; padding:5px 25px;}
+
+.b{ background:rgb(158, 195, 233); color:#000;}
+.b ul{ line-height:30px;}
+.b ul li{border-bottom:1px solid lightgray;}
+.b ul a{color:#FFF; font-weight:700; padding-left:25px; }
+.cd{background:#0066CC; color:#FFFFFF; font-size:13px; font-weight:700; text-align:center; width:100%;}
+
+#inbox li a{ color:#FFFFFF }
+
+#inbox { background:#666699}
+
+#inbox li a:hover{ color:#00FF99}
+
+#emplogin{ width:300px; margin-top:20px; border:2px #0099FF solid; }
+
+#emplist{ width:600px; margin-top:30px; background:#B0B0D9; color:#FFFFFF; margin-right:0px   }
+
+
+#emplist li a{ line-height:25px; list-style-type:none; color:#000; font-weight:500}
+
+
+#emplist li{list-style-type:none;}
+

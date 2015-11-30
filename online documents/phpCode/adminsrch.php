@@ -19,7 +19,7 @@ $srch_txt=unhack($s);
 	//echo '<div class="row" style="padding:20px">';
 	if (!empty($srch_txt))
 	{
-$engine=mysql_query("select * from doctor_detail where name like'%".$srch_txt."%' OR email like'%".$srch_txt."%' phone like'%".$srch_txt."%'  order by img_name asc   ")or die(mysql_error()." Searching Error line no 7 search.php");
+$engine=mysql_query("select * from doctor_detail where name like'%".$srch_txt."%' OR email like'%".$srch_txt."%' OR phone like'%".$srch_txt."%'")or die(mysql_error()." Searching Error line no 7 search.php");
 
 ?>
 <div class="container">

@@ -1,0 +1,46 @@
+<?php
+
+
+class DataInsert
+{
+
+
+
+function INSERT($data,$table,$docid)
+{
+
+$pname=$data[0];
+$proc=$data[1];
+$hosp=$data[2];
+$bdate=$data[3];
+$chrg=$data[4];
+$type=$data[5];
+
+
+mysql_query("INSERT INTO $table 
+
+(`id`, `doc_id`, `patient_name`, `procedure_name`, `hospital`, `appx_chrg`, `bill_no`, `bill_date`, `procedure_type_id`)
+VALUES('NULL','$docid','$pname','$proc','$hosp','$chrg','billno','$bdate','$type')")or die(mysql_error()." pp");
+
+
+}
+
+
+
+
+function SELECT($table,$order)
+{
+$t=mysql_query("select * from $table ORDER by id $order ")or die(mysql_error()."dsssssssssss");
+
+return $t;
+
+}
+
+
+
+
+
+
+}
+
+?>

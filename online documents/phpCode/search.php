@@ -18,7 +18,7 @@ $srch_txt=unhack($s);
 	//echo '<div class="row" style="padding:20px">';
 	if (!empty($srch_txt))
 	{
-$engine=mysql_query("select * from mydocs where img_name like'%".$srch_txt."%' AND doctor_name='$username'  order by img_name asc   ")or die(mysql_error()." Searching Error line no 7 search.php");		
+$engine=mysql_query("select * from mydocs where img_name OR details like'%".$srch_txt."%' AND doctor_name='$username'  order by img_name asc   ")or die(mysql_error()." Searching Error line no 7 search.php");		
 
 ?>
 <div class="container">
@@ -46,10 +46,11 @@ while ($search=mysql_fetch_array($engine))
 	$file_name=$search['img_name'];
 	$details=$search['details'];
 	$date=$search['doc_date'];
+	$cf=$search['current_folder'];
 	//echo '<br/>';
 	//echo ' <a href="'.$img.'"><img src="'.$img.'" height="50px"/></a> <input type="text" value="'.$file_name.'" readonly>  <input type="text" value="'.$details.'" readonly>  <input type="text" value="'.$date.'" readonly>';
 	?>
-	<div class="span2"><?php 	echo ' <a href="'.$img.'"><img src="'.$img.'" height="50px"/></a>';
+	<div class="span2"><?php 	echo ' <a href="images.php?i='.$img.'&f='.$cf.'"><img src="'.$img.'" /></a>';
   	 				 ?></div>
                     <div class="span2"><?php echo '<a href="edit.php?page='.$docs_id.'">'.$file_name.'</a>';?></div>
                     <div class="span2"><?php echo $details;?></div>

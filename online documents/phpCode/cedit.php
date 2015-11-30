@@ -62,7 +62,7 @@ $docs_id=$edit['docs_id'];
         	<label>Phone No</label>
            <?php echo '<input class="span4" type="text" value="'.$client_phone.'" name="client_phone1">';?><br />
                   <input type="checkbox" name="chk" class="checkbox " />
-                  <?php 	echo '<a href="'.$img.'"><img src="'.$img.'"  width="100" height="100"
+                  <?php 	echo '<a href="'.$img.'"><img src="'.$img.'_thumb"  width="100" height="100"
 				 title="edit image"/></a>';?> <input type="file"  id="myfile" name="myfile"  class="span3"/>
 
         </div>

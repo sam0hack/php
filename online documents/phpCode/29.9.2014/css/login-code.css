@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+	
+		input[type="text"],input[type="password"],input[type="date"] {
+	width: 170px; height: 25px; padding: 5px 10px 0px 10px; margin:2px 0 0px 0; 
+	background:#FFF;
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	font-family:Arial, Arial, Helvetica, sans-serif; font-size: 14px; color:#000;  border:1px solid #CCC;
+}
+	input::-webkit-input-placeholder  {
+    	/*color: #a1b2c3; text-shadow: 0px -1px 0px #38506b;  */
+	}
+	input:-moz-placeholder {
+	    color: #a1b2c3; text-shadow: 0px -1px 0px #38506b; 
+	}
+
+input.btm_marg{margin-bottom:30px;}
+	/*background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%); /* firefox */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#546A7F), color-stop(20%,#5E768D)); /* webkit */
+	
+	label{color:#FFF; font-weight:700}
+	.log_btn{width:100px; padding:5px 5px 5px 5px; background:#CCC; border-radius:5px; -webkit- border-radius:5px; -moz- border-radius:5px; color:#FFF; font-weight:700; border:1px solid #FFF;}
+	.log_btn:hover{ background:#FFF; color:#000;}
+	
+	.sub_btn{width:120px; padding:10px 20px 10px 20px; background:#005CB9; border-radius:5px; -webkit- border-radius:5px; -moz- border-radius:5px; color:#FFF; font-weight:700; border:1px solid #FFF;}
+	.sub_btn:hover{ background:#FF0; color:#000;}
+	
+.w_d{width:400px;}

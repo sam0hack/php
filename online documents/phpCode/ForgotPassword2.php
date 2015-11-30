@@ -84,10 +84,10 @@ if (!empty($imail)) {
 $mail = new PHPMailer;
 
 $mail->IsSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtpout.secureserver.net';  // Specify main and backup server
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'Your smtp Username';                            // SMTP username
-$mail->Password = 'Your Password';                           // SMTP password
+    $mail->Host = 'relay-hosting.secureserver.net';  // Specify main and backup server
+	//$mail->SMTPAuth = true;                               // Enable SMTP authentication
+	$mail->Username = 'elvish@galaxylifecare.info';                            // SMTP username
+	$mail->Password = 'elvish@123';                           // SMTP password
 //$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
 $mail->From = 'elvish@myhealthpackage.com';

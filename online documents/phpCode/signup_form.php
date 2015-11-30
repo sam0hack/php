@@ -3,6 +3,7 @@ ob_start();
 error_reporting(0);
 require 'database.php';
 require 'varfilter.php';
+require 'data_handler.php';
 if (isset($_POST['signup'])) {
 	$name=unhack($_POST['name']);
 	$email=unhack($_POST['email']);
@@ -11,6 +12,9 @@ if (isset($_POST['signup'])) {
 	$pass2=unhack($_POST['pass2']);
 	$sec_q=unhack($_POST['sec_q']);
 	$sec_a=unhack($_POST['sec_a']);
+  $city=unhack($_POST['city']);
+	$lastname=unhack($_POST['lname']);
+	$gen=unhack($_POST['gen']);
 	$ERROR="";
 //Start Validating submitted Date
 	if (empty($name) && empty($email) &&empty($phone) &&empty($pass1) && empty($pass2) &&empty($sec_q)&&empty($sec_a))
@@ -38,7 +42,15 @@ if (isset($_POST['signup'])) {
 	}
 //End Validating
 if ($ERROR==false) {          //If there is no ERROR then submit the user data
-	mysql_query("insert into tmp_table values('','NULL','$name','$email','$phone','$pass1','$sec_q','$sec_a','')")or die(mysql_error());
+
+
+//$hck= new enc();//Get enc
+
+//$phck=$hck->sam0hack($pass1);//Super Encrypted passsword with sam0hack. for more search on google sam0hack
+
+	mysql_query("insert into tmp_table
+	(`id`,`pic`,`name`,`email`,`phone`,`password`,`security_q`,`security_a`,`status`,`lastname`,`gender`,`city`)
+	values('NULL','NULL','$name','$email','$phone','$pass1','$sec_q','$sec_a','','$lastname','$gen','$city')")or die(mysql_error());
    $success="Successful ! You will receive a verification mail soon from us.";
 
 }
@@ -67,17 +79,47 @@ if ($ERROR==false) {          //If there is no ERROR then submit the user data
     	<form method="post">
         	<div class="row">
             	<div class="span2">
-                	Name
+                	First Name
                 </div>
                 <div class="span4">
-                	<input type="text" name="name" class="span4" />
+                	<input type="text" required="required" name="name" class="span4" />
                 </div>
+               <div class="span2">
+                	Last Name
+                </div>
+                <div class="span4">
+                	<input type="text" name="lname" class="span4" />
+                </div>
+
+
+
+               <div class="span2">
+                	Gender
+                </div>
+                <div class="span4">
+                <!--Male<input type="radio" name="gen" value="Male">
+                Female<input type="radio" name="gen" checked value="Female">-->
+                <select name="gen"><option value="Male">Male</option><option value="Female">Female</option></select>
+                </div>
+
+
+
                 <div class="span2">
                 	Email
                 </div>
                 <div class="span4">
-                	<input type="email" name="email"  class="span4" />
+                	<input type="email" required="required" name="email"  class="span4" />
                 </div>
+
+
+                <div class="span2">
+                  City
+                </div>
+                <div class="span4">
+                  <input type="text" required="required" name="city"  class="span4" />
+                </div>
+
+
         	<div class="span2">
                 	Phone
                 </div>
@@ -88,13 +130,13 @@ if ($ERROR==false) {          //If there is no ERROR then submit the user data
                 	Password
                 </div>
                 <div class="span4">
-                	<input type="password" name="pass1" class="span4" />
+                	<input type="password" required="required" name="pass1" class="span4" />
                 </div>
                 <div class="span2">
                 	Re Password
                 </div>
                 <div class="span4">
-                	<input type="password" name="pass2" class="span4" />
+                	<input type="password" required="required" name="pass2" class="span4" />
                 </div>
                 <!-- dsgf-->
                  <div class="span2">
@@ -119,7 +161,7 @@ if ($ERROR==false) {          //If there is no ERROR then submit the user data
                 	Security Answer
                 </div>
                 <div class="span4">
-                	<input type="text" name="sec_a" class="span4" />
+                	<input type="text" required="required" name="sec_a" class="span4" />
                 </div>
                </div>
 <div class="control-group error">

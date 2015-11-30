@@ -46,10 +46,11 @@ while ($search=mysql_fetch_array($engine))
 	$file_name=$search['img_name'];
 	$details=$search['details'];
 	$date=$search['doc_date'];
+	$cf=$search['current_folder'];
 	//echo '<br/>';
 	//echo ' <a href="'.$img.'"><img src="'.$img.'" height="50px"/></a> <input type="text" value="'.$file_name.'" readonly>  <input type="text" value="'.$details.'" readonly>  <input type="text" value="'.$date.'" readonly>';
 	?>
-	<div class="span2"><?php 	echo ' <a href="'.$img.'"><img src="'.$img.'" height="50px"/></a>';
+	<div class="span2"><?php 	echo ' <a href="images.php?i='.$img.'&f='.$cf.'"><img src="'.$img.'" height="50px"/></a>';
   	 				 ?></div>
                     <div class="span2"><?php echo '<a href="edit.php?page='.$docs_id.'">'.$file_name.'</a>';?></div>
                     <div class="span2"><?php echo $details;?></div>

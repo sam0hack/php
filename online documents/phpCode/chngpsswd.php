@@ -2,7 +2,7 @@
 ob_start();
 error_reporting(0);
 session_start();
-if(empty($_SESSION['cusername']) OR empty($_SESSION['username'] ) OR empty($_SESSION['ausername']))
+if(empty($_SESSION['cusername']) AND empty($_SESSION['username']) AND empty($_SESSION['ausername']))
 {
 header('location:index.php');
 exit();
