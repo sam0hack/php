@@ -36,6 +36,7 @@ else
 {
 $username=unhack($name);
 $password=unhack($pass);
+$password = md5($password);
 $finddoc=mysql_query("select username,password,doc_id,con_id from doctor_login where username='$username' AND password='$password' ")or die(mysql_error());
 if (mysql_num_rows($finddoc)==1)
 {
