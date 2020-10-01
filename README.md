@@ -21,7 +21,7 @@ upload images limit is 200
 Languages
 
 Frontend
-HTML5,css3 with bootstrap,js
+HTML5,css3 with bootstrap,js jquery
 ------------
 Backend
 php,Mysql
