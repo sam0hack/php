@@ -3,7 +3,9 @@ session_start();
 //require_once 'router.php';
 error_reporting(E_ALL);
 
+/* Database connection */
 require 'database.php';
+
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -39,9 +41,32 @@ require 'database.php';
 <span style="margin-left:809px;"><?php require_once 'login_status.php'; ?></span>
    </span>
 
-     <div class="Fo_nt " style=" color:#faa300; font-family:'Comic Sans MS', cursive; font-weight:bold; margin-left:10%; width:100px;"><span class="span8">My</span></div>
-<div class="Fo_nt" style="color:#79ab00; margin-left:20px; font-family:'Comic Sans MS', cursive; font-style:italic;"><span class="span1">Health</span></div>
-<div class="Fo_nt" style="color:#1da2d8;  width:100px; font-family:'Comic Sans MS', cursive; font-style:italic;"><span class="span2" style="margin-left:163px;">Package</span></div>
+     <div class="Fo_nt " 
+	  style=" color:#faa300; 
+		  font-family:'Comic Sans MS', cursive; 
+		  font-weight:bold; 
+		  margin-left:10%; 
+		  width:100px;">
+	     <span class="span8">My
+	     </span>
+     </div>
+	     
+<div class="Fo_nt" 
+     style="color:#79ab00; 
+	    margin-left:20px; 
+	    font-family:'Comic Sans MS', cursive; 
+	    font-style:italic;">
+	<span class="span1">Health
+	</span>
+</div>
+<div class="Fo_nt" style="color:#1da2d8;  
+			  width:100px; 
+			  font-family:'Comic Sans MS', cursive; 
+			  font-style:italic;">
+	<span class="span2" style="margin-left:163px;">
+		Package
+	</span>
+</div>
         
        </div>
      </div>
@@ -72,17 +97,38 @@ require 'database.php';
 
        
        
-<div style="float:left; " class="cl-effect-5 nav "><a style="color:#000000;" href="#"><span  data-hover=""><img src="img/1.png"  style="height:165px; width:165px; "/></span></a>				
+<div style="float:left; " class="cl-effect-5 nav ">
+	<a style="color:#000000;" href="#">
+		<span  data-hover="">
+		<img src="img/1.png"  style="height:165px; width:165px; "/>
+		</span>
+	</a>				
+ </div>
+	
+<div style="float:left;" class="cl-effect-51 nav1 ">	
+	<a style="color:#000000;" href="discussion.php">
+		<span data-hover="" >
+			<img src="img/2.png"  style="height:160px; width:160px;"/>
+		</span>
+	</a>				
 </div>
-<div style="float:left;" class="cl-effect-51 nav1 ">	<a style="color:#000000;" href="discussion.php"><span data-hover="" ><img src="img/2.png"  style="height:160px; width:160px;"/></span></a>				
-</div>
-<div style="float:left; " class="cl-effect-52 nav2 "><a style="color:#000000;" href="Login.php"><span data-hover=""><img src="img/3.png"  style="height:160px; width:160px; "/></span></a>				
+<div style="float:left; " class="cl-effect-52 nav2 ">
+	<a style="color:#000000;" href="Login.php">
+		<span data-hover=""><img src="img/3.png"  style="height:160px; width:160px; "/>
+		</span>
+	</a>				
 </div>
 </div>
 <div style="width:100%; margin:10px auto;  height:100px;">
 <form method="post" name="myform1" id="myform1" autocomplete="off" action="searchpackages.php">
-<div style="margin-left:13%;" ><input type="text"  name="ival"   id="cms1" onKeyUp="lookup_cms(this.value,this.id);" placeholder="Treatment"  style="width:560px; height:20px; margin:5px;" />
-<input type="submit"  value="Search" name="isearch" class="btn-success222"/>
+<div style="margin-left:13%;" >
+	<input type="text"  name="ival"   id="cms1" 
+	       onKeyUp="lookup_cms(this.value,this.id);" 
+	       placeholder="Treatment"  
+	       style="width:560px; height:20px; margin:5px;" />
+
+	
+	<input type="submit"  value="Search" name="isearch" class="btn-success222"/>
 
 <!---CHK HERE suggestions-->
 
@@ -96,7 +142,15 @@ require 'database.php';
 </div>
 </form>
 
-<div style="text-align:center; font-size:24px; font-family:'Comic Sans MS', cursive;   margin-top:-10px;  font-style:italic; color:#063;"><b class="p1">Search Packages for your Disease and Treatment</b></div>
+<div style="text-align:center; 
+	    font-size:24px; 
+	    font-family:'Comic Sans MS', cursive;   
+	    margin-top:-10px;  
+	    font-style:italic; 
+	    color:#063;">
+	<b class="p1">
+		Search Packages for your Disease and Treatment
+	</b></div>
 
 </div>
 </body>
