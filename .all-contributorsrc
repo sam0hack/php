@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Bhavya0304",
+      "name": "Bhavya0304",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/72244742?v=4",
+      "profile": "https://github.com/Bhavya0304",
+      "contributions": [
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "php",
+  "projectOwner": "sam0hack",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
